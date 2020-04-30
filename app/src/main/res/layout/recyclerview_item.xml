@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewCountryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ALA Aland Islands"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <TextView
+            android:id="@+id/textViewNewConfirmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NewConfirmed 0," />
+
+        <TextView
+            android:id="@+id/textViewNewDeath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NewDeaths" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewTotalDeath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TotalDeaths" />
+
+        <TextView
+            android:id="@+id/textViewNewRecovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NewRecovered" />
+
+        <TextView
+            android:id="@+id/textViewTotalRecovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NewtotalRecovered" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
