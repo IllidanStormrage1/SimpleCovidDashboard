@@ -1,66 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="8dp"
-    android:weightSum="100">
+    app:cardBackgroundColor="@color/colorLightGray"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="50"
-        android:gravity="start"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textViewCountryName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ALA Aland Islands"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
-
-        <TextView
-            android:id="@+id/textViewNewConfirmed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="NewConfirmed 0," />
-
-        <TextView
-            android:id="@+id/textViewNewDeath"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="NewDeaths" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="50"
-        android:gravity="start"
-        android:orientation="vertical">
+        android:padding="8dp"
+        android:weightSum="100">
 
         <TextView
-            android:id="@+id/textViewTotalDeath"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TotalDeaths" />
+            android:id="@+id/textViewCountryNameMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ussdfsdfsdfsdfsdfa"
+            android:gravity="center"
+            android:layout_weight="25"
+            android:fontFamily="@font/nunito_sans"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+            android:textColor="@color/colorPrimaryText" />
 
         <TextView
-            android:id="@+id/textViewNewRecovered"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="NewRecovered" />
+            android:id="@+id/textViewNewConfirmedMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="10б9350"
+            android:layout_weight="25"
+            android:fontFamily="@font/nunito_sans"
+            android:gravity="center"
+            android:textColor="@color/colorSecondaryText" />
 
         <TextView
-            android:id="@+id/textViewTotalRecovered"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="NewtotalRecovered" />
+            android:id="@+id/textViewNewRecoveredMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:text="5675567756768"
+            android:fontFamily="@font/nunito_sans"
+            android:gravity="center"
+            android:textColor="@color/colorSecondaryText" />
+
+        <TextView
+            android:id="@+id/textViewNewDeathMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="5686780"
+            android:layout_weight="25"
+            android:fontFamily="@font/nunito_sans"
+            android:gravity="center"
+            android:textColor="@color/colorSecondaryText" />
+
 
     </LinearLayout>
-
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

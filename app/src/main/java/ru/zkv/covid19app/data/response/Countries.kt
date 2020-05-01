@@ -23,6 +23,4 @@ data class Countries(
     val totalRecovered: Int,
     @SerializedName("Date")
     val date: String
-) : ItemModel {
-    override val type: ItemType = ItemType.LIST_ITEM
-}
+)

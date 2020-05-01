@@ -15,6 +15,4 @@ data class Global(
     val newRecovered: Int,
     @SerializedName("TotalRecovered")
     val totalRecovered: Int
-) : ItemModel {
-    override val type: ItemType = ItemType.PINNED_ITEM
-}
+)

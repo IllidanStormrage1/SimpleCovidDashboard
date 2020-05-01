@@ -19,8 +19,6 @@ class DataAdapter : RecyclerView.Adapter<DataAdapter.ListViewHolder>() {
         notifyDataSetChanged()
     }
 
-    override fun getItemViewType(position: Int): Int = itemList[position].type.id
-
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) =
         holder.bind(item = itemList[position])
 
@@ -28,18 +26,16 @@ class DataAdapter : RecyclerView.Adapter<DataAdapter.ListViewHolder>() {
         ListViewHolder(parent.inflate(R.layout.recyclerview_item))
 
     override fun getItemCount(): Int = itemList.size
-    
+
     class ListViewHolder(override val containerView: View) :
         RecyclerView.ViewHolder(containerView),
         LayoutContainer {
 
         fun bind(item: Countries) = containerView.run {
-            textViewCountryName.text = item.country
-            textViewNewConfirmed.text = item.newConfirmed.toString()
-            textViewNewDeath.text = item.newDeaths.toString()
-            textViewTotalDeath.text = item.totalDeaths.toString()
-            textViewNewRecovered.text = item.newRecovered.toString()
-            textViewTotalRecovered.text = item.totalRecovered.toString()
+            textViewCountryNameMain.text = item.country
+            textViewNewConfirmedMain.text = item.newConfirmed.toString()
+            textViewNewRecoveredMain.text = item.newRecovered.toString()
+            textViewNewDeathMain.text = item.newDeaths.toString()
         }
     }
 

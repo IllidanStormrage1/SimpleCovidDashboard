@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/textViewNewDeathsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:drawableStart="@drawable/ic_arrow_upward_black_24dp"
+        android:drawablePadding="2dp"
+        android:drawableTint="@color/colorRed"
+        android:textColor="@color/colorRed"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTotalDeaths"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalDeaths"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalDeaths" />
+
+    <TextView
+        android:id="@+id/textViewTotalDeaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNewDeathsHeader"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textViewTotalRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNewRecoveredHeader"
+        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textViewNewRecoveredHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:drawableStart="@drawable/ic_arrow_upward_black_24dp"
+        android:drawablePadding="2dp"
+        android:drawableTint="@color/colorLightGreen"
+        android:textColor="@color/colorLightGreen"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTotalRecovered"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalRecovered"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalRecovered" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:text="@string/recovered"
+        android:textColor="@color/colorLightGreen"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTotalRecovered"
+        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:text="@string/deaths"
+        android:textColor="@color/colorRed"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTotalDeaths"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTotalConfirmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNewConfirmedHeader"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textViewNewConfirmedHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:drawableStart="@drawable/ic_arrow_upward_black_24dp"
+        android:drawablePadding="2dp"
+        android:drawableTint="@color/colorPurple"
+        android:textColor="@color/colorPurple"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTotalConfirmed"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalConfirmed"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalConfirmed" />
+
+    <TextView
+
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:text="@string/confirmed"
+        android:textColor="@color/colorPurple"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTotalConfirmed"
+        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNewDeathsHeader"
+        app:layout_constraintStart_toStartOf="@+id/textViewNewDeathsHeader"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNewDeathsHeader"
+        app:srcCompat="@drawable/ic_halloween" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNewRecoveredHeader"
+        app:layout_constraintStart_toStartOf="@+id/textViewNewRecoveredHeader"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNewRecoveredHeader"
+        app:srcCompat="@drawable/ic_people" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNewConfirmedHeader"
+        app:layout_constraintStart_toStartOf="@+id/textViewNewConfirmedHeader"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNewConfirmedHeader"
+        app:srcCompat="@drawable/ic_sick" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
