@@ -16,10 +16,10 @@ class MainPresenter @Inject constructor(private val mainInteractor: MainInteract
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
-        update()
+        onRefresh()
     }
 
-    fun update() {
+    fun onRefresh() {
         presenterScope.launch {
             viewState.showLoading(true)
             val data = getData()

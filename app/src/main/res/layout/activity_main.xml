@@ -38,7 +38,7 @@
                     android:fontFamily="@font/nunito_sans_semibold"
                     android:gravity="center"
                     android:text="@string/countries"
-                    android:textColor="@color/colorPrimaryText" />
+                    android:textColor="@color/colorSecondaryText" />
 
                 <TextView
                     android:id="@+id/textViewNewConfirmedMain"
@@ -78,10 +78,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/layout_margin_start_end_16dp"
                 android:layout_marginEnd="@dimen/layout_margin_start_end_16dp"
-                android:clipToPadding="false"
                 android:orientation="vertical"
                 android:overScrollMode="ifContentScrolls"
-                android:paddingBottom="@dimen/recyclerview_padding_bottom"
                 android:scrollbars="none"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 

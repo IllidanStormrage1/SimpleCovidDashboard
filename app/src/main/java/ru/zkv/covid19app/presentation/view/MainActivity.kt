@@ -26,7 +26,7 @@ class MainActivity : MvpAppCompatActivity(), MainView {
 
         swipeRefreshLayout.run {
             setProgressViewOffset(true, 0, 300)
-            setOnRefreshListener { presenter.update() }
+            setOnRefreshListener { presenter.onRefresh() }
         }
     }
 
@@ -54,9 +54,7 @@ class MainActivity : MvpAppCompatActivity(), MainView {
             setCancelable(false)
             setTitle(R.string.title)
             setMessage(R.string.text)
-            setPositiveButton(R.string.accept) { dialog, which ->
-                presenter.update()
-            }
+            setPositiveButton(R.string.accept) { _, _ -> presenter.onRefresh() }
             show()
         }
     }

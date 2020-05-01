@@ -11,7 +11,12 @@
 
     <!--Strings for AlertDialog-->
     <string name="title">Ooops</string>
-    <string name="text">pizda</string>
-    <string name="accept">ok</string>
+    <string name="text">An error has occurred</string>
+    <string name="accept">OK</string>
+
+    <!--Strings for Image description-->
+    <string name="image_confirmed">imageConfirmed</string>
+    <string name="image_recovered">imageRecovered</string>
+    <string name="image_dead">imageDead</string>
 
 </resources>

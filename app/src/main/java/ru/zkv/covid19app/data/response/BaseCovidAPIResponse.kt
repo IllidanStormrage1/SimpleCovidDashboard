@@ -6,7 +6,5 @@ data class BaseCovidAPIResponse(
     @SerializedName("Global")
     val global: Global,
     @SerializedName("Countries")
-    val countries: List<Countries>,
-    @SerializedName("Date")
-    val date: String
+    val countries: List<Countries>
 )
