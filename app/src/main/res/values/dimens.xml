@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="card_padding">8dp</dimen>
+    <dimen name="layout_margin">24dp</dimen>
+    <dimen name="text_drawable_padding">2dp</dimen>
+    <dimen name="layout_32dp">32dp</dimen>
+    <dimen name="linear_layout_margin_top">8dp</dimen>
+    <dimen name="layout_margin_start_end_16dp">16dp</dimen>
+    <dimen name="recyclerview_padding_bottom">32dp</dimen>
+</resources>

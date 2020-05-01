@@ -4,8 +4,7 @@ import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import ru.zkv.covid19app.data.CovidAPi
-import javax.inject.Singleton
+import ru.zkv.covid19app.data.CovidAPI
 
 @Module
 object NetworkModule {
@@ -20,5 +19,5 @@ object NetworkModule {
 
     @Provides
     @JvmStatic
-    fun provideApi(retrofit: Retrofit): CovidAPi = retrofit.create(CovidAPi::class.java)
+    fun provideApi(retrofit: Retrofit): CovidAPI = retrofit.create(CovidAPI::class.java)
 }

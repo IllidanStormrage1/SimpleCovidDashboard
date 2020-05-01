@@ -1,6 +1,7 @@
 package ru.zkv.covid19app.presentation.view
 
 import android.os.Bundle
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.main_header_view.*
 import moxy.MvpAppCompatActivity
@@ -22,30 +23,41 @@ class MainActivity : MvpAppCompatActivity(), MainView {
         App.appComponent.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        swipeRefreshLayout.run {
+            setProgressViewOffset(true, 0, 300)
+            setOnRefreshListener { presenter.update() }
+        }
     }
 
-    override fun initRecyclerViewAdapter(adapter: DataAdapter) {
+    override fun setRecyclerViewAdapter(adapter: DataAdapter) {
         mainRecyclerView.adapter = adapter
     }
 
-    override fun initHeaderView(value: Global?) {
-        value?.run {
+    override fun initHeaderView(value: Global) =
+        value.run {
             textViewTotalConfirmed.text = TotalConfirmed.toString()
             textViewTotalConfirmed.text = TotalConfirmed.toString()
             textViewTotalRecovered.text = totalRecovered.toString()
             textViewTotalDeaths.text = totalDeaths.toString()
-
             textViewNewConfirmedHeader.text = newConfirmed.toString()
             textViewNewRecoveredHeader.text = newRecovered.toString()
             textViewNewDeathsHeader.text = newDeaths.toString()
         }
+
+    override fun showLoading(isLoading: Boolean) {
+        swipeRefreshLayout.isRefreshing = isLoading
     }
 
-    override fun hideLoading() {
-        swipeRefreshLayout.isRefreshing = false
-    }
-
-    override fun showLoading() {
-        swipeRefreshLayout.isRefreshing = true
+    override fun showError() {
+        MaterialAlertDialogBuilder(this).run {
+            setCancelable(false)
+            setTitle(R.string.title)
+            setMessage(R.string.text)
+            setPositiveButton(R.string.accept) { dialog, which ->
+                presenter.update()
+            }
+            show()
+        }
     }
 }

@@ -4,7 +4,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import ru.zkv.covid19app.data.response.BaseCovidAPIResponse
 
-interface CovidAPi {
+interface CovidAPI {
 
     @GET("summary")
     suspend fun summaryData(): Response<BaseCovidAPIResponse>

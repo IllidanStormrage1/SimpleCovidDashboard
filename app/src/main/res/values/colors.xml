@@ -4,13 +4,15 @@
     <color name="colorPrimaryDark">#262A41</color>
     <color name="colorAccent">#03DAC5</color>
 
+    <!--Colors for background-->
     <color name="colorFrontLayer">#FFFFFF</color>
     <color name="colorBackLayer">#262A41</color>
-    <color name="colorRed">#FC312F</color>
-    <color name="colorPurple">#9F83FF</color>
     <color name="colorLightGray">#F0F1F3</color>
-    <color name="colorPrimaryText">#1A0628</color>
-    <color name="colorLightGreen">#219653</color>
+
+    <!--Colors for text-->
     <color name="colorSecondaryText">#555770</color>
+    <color name="colorRed">#FC312F</color>
+    <color name="colorLightGreen">#219653</color>
+    <color name="colorPurple">#9F83FF</color>
 
 </resources>

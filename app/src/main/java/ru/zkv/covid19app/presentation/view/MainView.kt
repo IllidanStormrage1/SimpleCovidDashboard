@@ -9,14 +9,14 @@ import ru.zkv.covid19app.presentation.adapter.DataAdapter
 interface MainView : MvpView {
 
     @AddToEndSingle
-    fun initRecyclerViewAdapter(adapter: DataAdapter)
+    fun setRecyclerViewAdapter(adapter: DataAdapter)
 
     @AddToEndSingle
-    fun initHeaderView(value: Global?)
+    fun initHeaderView(value: Global)
 
     @Skip
-    fun hideLoading()
+    fun showLoading(isLoading: Boolean)
 
     @Skip
-    fun showLoading()
+    fun showError()
 }

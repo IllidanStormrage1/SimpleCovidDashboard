@@ -4,35 +4,34 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardBackgroundColor="@color/colorLightGray"
-    app:cardCornerRadius="4dp"
-    app:cardElevation="4dp"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation"
     app:cardUseCompatPadding="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp"
+        android:padding="@dimen/card_padding"
         android:weightSum="100">
 
         <TextView
             android:id="@+id/textViewCountryNameMain"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="ussdfsdfsdfsdfsdfa"
-            android:gravity="center"
             android:layout_weight="25"
             android:fontFamily="@font/nunito_sans"
-            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
-            android:textColor="@color/colorPrimaryText" />
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorSecondaryText" />
 
         <TextView
             android:id="@+id/textViewNewConfirmedMain"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="10б9350"
             android:layout_weight="25"
             android:fontFamily="@font/nunito_sans"
             android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/colorSecondaryText" />
 
         <TextView
@@ -40,19 +39,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="25"
-            android:text="5675567756768"
             android:fontFamily="@font/nunito_sans"
             android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/colorSecondaryText" />
 
         <TextView
             android:id="@+id/textViewNewDeathMain"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="5686780"
             android:layout_weight="25"
             android:fontFamily="@font/nunito_sans"
             android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/colorSecondaryText" />
 
 

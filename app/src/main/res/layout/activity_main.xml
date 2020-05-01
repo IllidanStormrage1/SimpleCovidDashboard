@@ -24,9 +24,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="@dimen/layout_margin_start_end_16dp"
+                android:layout_marginTop="@dimen/linear_layout_margin_top"
+                android:layout_marginEnd="@dimen/layout_margin_start_end_16dp"
                 android:layout_marginBottom="4dp"
                 android:orientation="horizontal">
 
@@ -38,7 +38,6 @@
                     android:fontFamily="@font/nunito_sans_semibold"
                     android:gravity="center"
                     android:text="@string/countries"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
                     android:textColor="@color/colorPrimaryText" />
 
                 <TextView
@@ -73,20 +72,18 @@
 
             </LinearLayout>
 
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/mainRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="@dimen/layout_margin_start_end_16dp"
+                android:layout_marginEnd="@dimen/layout_margin_start_end_16dp"
                 android:clipToPadding="false"
                 android:orientation="vertical"
                 android:overScrollMode="ifContentScrolls"
-                android:paddingBottom="32dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:itemCount="9"
-                tools:listitem="@layout/recyclerview_item" />
+                android:paddingBottom="@dimen/recyclerview_padding_bottom"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
         </LinearLayout>
 

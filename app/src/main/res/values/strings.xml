@@ -4,9 +4,14 @@
     <string name="countries">Countries</string>
     <string name="new_confirmed">Confirmed</string>
     <string name="new_recovered">Recovered</string>
-    <string name="new_death">Death</string>
-    <string name="recovered">Recovered</string>
-    <string name="deaths">Deaths</string>
-    <string name="confirmed">Confirmed</string>
+    <string name="new_death">Deaths</string>
+    <string name="recovered">Total recovered</string>
+    <string name="deaths">Total deaths</string>
+    <string name="confirmed">Total confirmed</string>
+
+    <!--Strings for AlertDialog-->
+    <string name="title">Ooops</string>
+    <string name="text">pizda</string>
+    <string name="accept">ok</string>
 
 </resources>
