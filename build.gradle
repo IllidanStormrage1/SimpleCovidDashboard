@@ -6,6 +6,7 @@ buildscript {
         daggerVersion = '2.27'
         moxyVersion = '2.1.2'
         retrofitVersion = '2.8.1'
+        glideVersion = '4.11.0'
     }
     repositories {
         google()

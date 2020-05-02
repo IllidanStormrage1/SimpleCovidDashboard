@@ -17,3 +17,4 @@ class ListViewHolder(override val containerView: View) :
         textViewNewDeathMain.text = item.newDeaths.toString()
     }
 }
+// https://www.countryflags.io/ru/shiny/64.png

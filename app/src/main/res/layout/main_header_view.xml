@@ -132,20 +132,22 @@
         app:layout_constraintEnd_toEndOf="@+id/textViewNewDeathsHeader"
         app:layout_constraintStart_toStartOf="@+id/textViewNewDeathsHeader"
         app:layout_constraintTop_toBottomOf="@+id/textViewNewDeathsHeader"
-        app:srcCompat="@drawable/ic_halloween" />
+        app:srcCompat="@drawable/ic_skull" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="@dimen/layout_32dp"
+        android:scaleType="fitCenter"
         android:layout_height="@dimen/layout_32dp"
         android:contentDescription="@string/image_recovered"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textViewNewRecoveredHeader"
         app:layout_constraintStart_toStartOf="@+id/textViewNewRecoveredHeader"
         app:layout_constraintTop_toBottomOf="@+id/textViewNewRecoveredHeader"
-        app:srcCompat="@drawable/ic_people" />
+        app:srcCompat="@drawable/ic_man" />
 
     <ImageView
+        android:scaleType="fitCenter"
         android:id="@+id/imageView4"
         android:layout_width="@dimen/layout_32dp"
         android:layout_height="@dimen/layout_32dp"
@@ -154,7 +156,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textViewNewConfirmedHeader"
         app:layout_constraintStart_toStartOf="@+id/textViewNewConfirmedHeader"
         app:layout_constraintTop_toBottomOf="@+id/textViewNewConfirmedHeader"
-        app:srcCompat="@drawable/ic_sick" />
+        app:srcCompat="@drawable/ic_biohazard" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

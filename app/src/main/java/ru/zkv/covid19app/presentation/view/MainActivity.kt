@@ -12,15 +12,17 @@ import ru.zkv.covid19app.data.response.Global
 import ru.zkv.covid19app.presentation.adapter.DataAdapter
 import ru.zkv.covid19app.presentation.presenter.MainPresenter
 import javax.inject.Inject
+import javax.inject.Provider
 
 class MainActivity : MvpAppCompatActivity(), MainView {
 
     @Inject
-    lateinit var mainPresenterProvider: javax.inject.Provider<MainPresenter>
+    lateinit var mainPresenterProvider: Provider<MainPresenter>
     private val presenter: MainPresenter by moxyPresenter { mainPresenterProvider.get() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         App.appComponent.inject(this)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -28,6 +30,7 @@ class MainActivity : MvpAppCompatActivity(), MainView {
             setProgressViewOffset(true, 0, 300)
             setOnRefreshListener { presenter.onRefresh() }
         }
+        window.setBackgroundDrawable(null)
     }
 
     override fun setRecyclerViewAdapter(adapter: DataAdapter) {
@@ -36,8 +39,8 @@ class MainActivity : MvpAppCompatActivity(), MainView {
 
     override fun initHeaderView(value: Global) =
         value.run {
-            textViewTotalConfirmed.text = TotalConfirmed.toString()
-            textViewTotalConfirmed.text = TotalConfirmed.toString()
+            textViewTotalConfirmed.text = totalConfirmed.toString()
+            textViewTotalConfirmed.text = totalConfirmed.toString()
             textViewTotalRecovered.text = totalRecovered.toString()
             textViewTotalDeaths.text = totalDeaths.toString()
             textViewNewConfirmedHeader.text = newConfirmed.toString()

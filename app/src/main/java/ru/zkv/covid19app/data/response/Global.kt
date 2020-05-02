@@ -6,11 +6,13 @@ data class Global(
     @SerializedName("NewConfirmed")
     val newConfirmed: Int,
     @SerializedName("TotalConfirmed")
-    val TotalConfirmed: Int,
+    val totalConfirmed: Int,
+
     @SerializedName("NewDeaths")
     val newDeaths: Int,
     @SerializedName("TotalDeaths")
     val totalDeaths: Int,
+
     @SerializedName("NewRecovered")
     val newRecovered: Int,
     @SerializedName("TotalRecovered")
