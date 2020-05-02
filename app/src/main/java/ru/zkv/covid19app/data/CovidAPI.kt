@@ -2,14 +2,11 @@ package ru.zkv.covid19app.data
 
 import retrofit2.Response
 import retrofit2.http.GET
-import ru.zkv.covid19app.data.response.Countries
-import ru.zkv.covid19app.data.response.Global
+import ru.zkv.covid19app.data.response.BaseCovidAPIResponse
 
 interface CovidAPI {
 
     @GET("summary")
-    suspend fun globalData(): Response<Global>
+    suspend fun summaryData(): Response<BaseCovidAPIResponse>
 
-    @GET("summary")
-    suspend fun countriesData(): Response<Countries>
 }

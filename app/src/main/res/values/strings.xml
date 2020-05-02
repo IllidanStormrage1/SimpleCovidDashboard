@@ -15,8 +15,11 @@
     <string name="accept">OK</string>
 
     <!--Strings for Image description-->
+    <string name="image_country">imageCountry</string>
     <string name="image_confirmed">imageConfirmed</string>
     <string name="image_recovered">imageRecovered</string>
     <string name="image_dead">imageDead</string>
+
+    <string name="plus">+%d</string>
 
 </resources>

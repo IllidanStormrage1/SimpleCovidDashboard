@@ -58,6 +58,10 @@ dependencies {
     implementation "com.google.dagger:dagger:$daggerVersion"
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
 
+    // glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+
     // moxy
     kapt "com.github.moxy-community:moxy-compiler:$moxyVersion"
     implementation "com.github.moxy-community:moxy:$moxyVersion"
@@ -67,10 +71,6 @@ dependencies {
     // retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-
-    // glide
-    implementation "com.github.bumptech.glide:glide:$glideVersion"
-    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
 
     // tests
     testImplementation 'junit:junit:4.12'

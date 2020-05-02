@@ -9,20 +9,25 @@ class MainInteractor @Inject constructor(private val apiModule: CovidAPI) {
     private val completableJob = Job()
     private val coroutineScope = CoroutineScope(Dispatchers.IO + completableJob)
 
-    suspend fun getGlobalData() =
+    suspend fun getCountriesData() =
         withContext(coroutineScope.coroutineContext) {
             try {
-                apiModule.globalData().body()
-            } catch (e: java.lang.Exception) {
+                apiModule.summaryData().body()
+                    ?.countries
+                    ?.filter { it.totalConfirmed != 0 && it.totalRecovered != 0 && it.totalDeaths != 0 }
+                    ?.sortedBy { it.totalConfirmed }
+                    ?.asReversed()
+            } catch (e: Exception) {
                 null
             }
         }
 
-    suspend fun getCountriesData() =
+    suspend fun getGlobalData() =
         withContext(coroutineScope.coroutineContext) {
             try {
-                apiModule.countriesData().body()
-            } catch (e: java.lang.Exception) {
+                apiModule.summaryData().body()
+                    ?.global
+            } catch (e: Exception) {
                 null
             }
         }

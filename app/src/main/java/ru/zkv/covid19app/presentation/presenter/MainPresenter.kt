@@ -4,6 +4,8 @@ import kotlinx.coroutines.launch
 import moxy.InjectViewState
 import moxy.MvpPresenter
 import moxy.presenterScope
+import ru.zkv.covid19app.data.response.Country
+import ru.zkv.covid19app.data.response.Global
 import ru.zkv.covid19app.domain.interactor.MainInteractor
 import ru.zkv.covid19app.presentation.adapter.DataAdapter
 import ru.zkv.covid19app.presentation.view.MainView
@@ -23,10 +25,12 @@ class MainPresenter @Inject constructor(private val mainInteractor: MainInteract
     fun onRefresh() {
         presenterScope.launch {
             viewState.showLoading(true)
-            val data = getData()
-            if (data != null) {
-                initHeader(data)
-                initRecyclerViewAdapter(data)
+
+            val globalData = mainInteractor.getGlobalData()
+            val countriesData = mainInteractor.getCountriesData()
+            if (globalData != null && countriesData != null) {
+                initHeader(globalData)
+                initRecyclerViewAdapter(countriesData)
             } else {
                 viewState.showError()
             }
@@ -34,16 +38,14 @@ class MainPresenter @Inject constructor(private val mainInteractor: MainInteract
         }
     }
 
-    private fun initRecyclerViewAdapter(data: BaseCovidAPIResponse) {
-        dataAdapter.attachData(data.countries)
+    private fun initRecyclerViewAdapter(data: Collection<Country>) {
+        dataAdapter.attachData(data)
         viewState.setRecyclerViewAdapter(adapter = dataAdapter)
     }
 
-    private fun initHeader(data: BaseCovidAPIResponse) {
-        viewState.initHeaderView(data.global)
+    private fun initHeader(data: Global) {
+        viewState.initHeaderView(data)
     }
-
-    private suspend fun getData(): BaseCovidAPIResponse? = mainInteractor.getSummaryData()
 
     override fun onDestroy() {
         super.onDestroy()

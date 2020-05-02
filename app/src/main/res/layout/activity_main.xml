@@ -80,7 +80,7 @@
                 android:overScrollMode="ifContentScrolls"
                 android:scrollbars="none"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/recyclerview_item" />
+                tools:listitem="@layout/recyclerview_new_item" />
 
         </LinearLayout>
 
