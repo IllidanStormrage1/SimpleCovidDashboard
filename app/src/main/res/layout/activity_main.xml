@@ -48,7 +48,7 @@
                     android:fontFamily="@font/nunito_sans_semibold"
                     android:gravity="center"
                     android:text="@string/new_confirmed"
-                    android:textColor="@color/colorPurple" />
+                    android:textColor="@color/colorBlue" />
 
                 <TextView
                     android:id="@+id/textViewNewRecoveredMain"
@@ -80,7 +80,7 @@
                 android:overScrollMode="ifContentScrolls"
                 android:scrollbars="none"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/recyclerview_new_item" />
+                tools:listitem="@layout/recyclerview_item" />
 
         </LinearLayout>
 

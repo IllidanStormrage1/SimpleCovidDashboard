@@ -80,8 +80,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="25"
                 android:contentDescription="@string/image_country"
-                android:minHeight="64px"
-                android:scaleType="centerInside" />
+                android:minHeight="@dimen/min_height_flag_image" />
 
             <TextView
                 android:id="@+id/textViewNewConfirmedMain"
@@ -91,7 +90,7 @@
                 android:fontFamily="@font/nunito_sans"
                 android:gravity="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/colorPurple"
+                android:textColor="@color/colorBlue"
                 tools:text="+100" />
 
             <TextView

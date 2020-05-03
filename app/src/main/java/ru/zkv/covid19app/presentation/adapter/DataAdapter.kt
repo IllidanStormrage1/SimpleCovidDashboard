@@ -24,7 +24,7 @@ class DataAdapter : RecyclerView.Adapter<ListViewHolder>() {
         holder.bind(item = items[position])
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder =
-        ListViewHolder(containerView = parent.inflate(R.layout.recyclerview_new_item))
+        ListViewHolder(containerView = parent.inflate(R.layout.recyclerview_item))
 
     override fun getItemCount(): Int = items.size
 }

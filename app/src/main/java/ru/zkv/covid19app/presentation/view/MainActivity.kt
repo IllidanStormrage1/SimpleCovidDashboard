@@ -29,8 +29,8 @@ class MainActivity : MvpAppCompatActivity(), MainView {
         swipeRefreshLayout.run {
             setProgressViewOffset(true, 0, 300)
             setOnRefreshListener { presenter.onRefresh() }
+            setColorSchemeResources(R.color.colorRed, R.color.colorLightGreen, R.color.colorBlue)
         }
-        window.setBackgroundDrawable(null)
     }
 
     override fun setRecyclerViewAdapter(adapter: DataAdapter) {
@@ -40,12 +40,12 @@ class MainActivity : MvpAppCompatActivity(), MainView {
     override fun initHeaderView(value: Global) =
         value.run {
             textViewTotalConfirmed.text = totalConfirmed.toString()
-            textViewTotalConfirmed.text = totalConfirmed.toString()
             textViewTotalRecovered.text = totalRecovered.toString()
             textViewTotalDeaths.text = totalDeaths.toString()
-            textViewNewConfirmedHeader.text = newConfirmed.toString()
-            textViewNewRecoveredHeader.text = newRecovered.toString()
-            textViewNewDeathsHeader.text = newDeaths.toString()
+
+            textViewNewConfirmedHeader.text = resources.getString(R.string.plus, newConfirmed)
+            textViewNewRecoveredHeader.text = resources.getString(R.string.plus, newRecovered)
+            textViewNewDeathsHeader.text = resources.getString(R.string.plus, newDeaths)
         }
 
     override fun showLoading(isLoading: Boolean) {

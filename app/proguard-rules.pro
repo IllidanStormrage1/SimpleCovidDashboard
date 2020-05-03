@@ -19,3 +19,18 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# retrofit
+-dontwarn com.squareup.**
+-dontwarn retrofit.appengine.UrlFetchClient
+-dontwarn rx.**
+-dontwarn okio.**
+-keep class retrofit.** { *; }
+-keepattributes *Annotation*, Signature
+-keepclasseswithmembers class * {
+    @retrofit.http.* <methods>;
+}
+
+-keepclassmembers,allowobfuscation class * {
+  @com.google.gson.annotations.SerializedName <fields>;
+}

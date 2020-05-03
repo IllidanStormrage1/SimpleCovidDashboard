@@ -4,7 +4,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.recyclerview_new_item.view.*
+import kotlinx.android.synthetic.main.recyclerview_item.view.*
 import ru.zkv.covid19app.R
 import ru.zkv.covid19app.data.response.Country
 
@@ -21,8 +21,8 @@ class ListViewHolder(override val containerView: View) :
         textViewNewRecoveredMain.text = resources.getString(R.string.plus, item.newRecovered)
         textViewNewDeathMain.text = resources.getString(R.string.plus, item.newDeaths)
 
-        textViewConfirmedMain.text = resources.getString(R.string.plus, item.totalConfirmed)
-        textViewRecoveredMain.text = resources.getString(R.string.plus, item.totalRecovered)
-        textViewDeathMain.text = resources.getString(R.string.plus, item.totalDeaths)
+        textViewConfirmedMain.text = item.totalConfirmed.toString()
+        textViewRecoveredMain.text = item.totalRecovered.toString()
+        textViewDeathMain.text = item.totalDeaths.toString()
     }
 }

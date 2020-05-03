@@ -8,4 +8,5 @@
     <dimen name="layout_32dp">32dp</dimen>
     <dimen name="linear_layout_margin_top">8dp</dimen>
     <dimen name="layout_margin_start_end_16dp">16dp</dimen>
+    <dimen name="min_height_flag_image">64px</dimen>
 </resources>
