@@ -76,10 +76,15 @@
                 android:id="@+id/mainRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fadeScrollbars="true"
                 android:orientation="vertical"
                 android:overScrollMode="ifContentScrolls"
-                android:scrollbars="none"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbarThumbVertical="@color/colorSecondaryText"
+                android:scrollbarTrackVertical="@color/colorFrontLayer"
+                android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="10"
                 tools:listitem="@layout/recyclerview_item" />
 
         </LinearLayout>

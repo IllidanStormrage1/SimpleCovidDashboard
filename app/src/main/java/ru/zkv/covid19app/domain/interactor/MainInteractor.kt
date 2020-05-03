@@ -12,11 +12,10 @@ class MainInteractor @Inject constructor(private val apiModule: CovidAPI) {
     suspend fun getCountriesData() =
         withContext(coroutineScope.coroutineContext) {
             try {
-                apiModule.summaryData().body()
-                    ?.countries
+                apiModule.summaryData().body()?.countries
                     ?.filter { it.totalConfirmed != 0 && it.totalRecovered != 0 && it.totalDeaths != 0 }
                     ?.sortedBy { it.totalConfirmed }
-                    ?.asReversed()
+                    ?.reversed()
             } catch (e: Exception) {
                 null
             }
@@ -25,8 +24,7 @@ class MainInteractor @Inject constructor(private val apiModule: CovidAPI) {
     suspend fun getGlobalData() =
         withContext(coroutineScope.coroutineContext) {
             try {
-                apiModule.summaryData().body()
-                    ?.global
+                apiModule.summaryData().body()?.global
             } catch (e: Exception) {
                 null
             }

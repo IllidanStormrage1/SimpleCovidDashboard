@@ -21,5 +21,6 @@
     <string name="image_dead">imageDead</string>
 
     <string name="plus">+%d</string>
+    <string name="dotName">%d. %s</string>
 
 </resources>

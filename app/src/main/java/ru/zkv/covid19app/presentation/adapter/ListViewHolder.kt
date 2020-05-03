@@ -13,7 +13,8 @@ class ListViewHolder(override val containerView: View) :
     LayoutContainer {
 
     fun bind(item: Country) = containerView.run {
-        textViewCountryNameMain.text = item.country
+        textViewCountryNameMain.text =
+            resources.getString(R.string.dotName, adapterPosition + 1, item.country)
         Glide.with(context).load("https://www.countryflags.io/${item.countryCode}/flat/64.png")
             .into(imageViewCountry)
 
