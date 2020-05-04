@@ -9,7 +9,7 @@ import ru.zkv.covid19app.domain.surrogateAll
 
 class DataAdapter : RecyclerView.Adapter<ListViewHolder>() {
 
-    private val items = mutableListOf<Country>()
+    private val items: MutableList<Country> = mutableListOf()
 
     fun attachData(newData: Collection<Country>) {
         val isInsertion = items.isEmpty()

@@ -2,7 +2,7 @@ package ru.zkv.covid19app.data.response
 
 import com.google.gson.annotations.SerializedName
 
-data class Global(
+class Global(
     @SerializedName("NewConfirmed")
     val newConfirmed: Int,
     @SerializedName("TotalConfirmed")

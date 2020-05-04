@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/layout_margin_start_end_16dp"
-    android:layout_marginEnd="@dimen/layout_margin_start_end_16dp"
+    android:layout_marginStart="@dimen/layout_space"
+    android:layout_marginEnd="@dimen/layout_space"
     app:cardBackgroundColor="@color/colorLightGray"
     app:cardCornerRadius="@dimen/card_corner_radius"
     app:cardElevation="@dimen/card_elevation"
@@ -24,45 +24,37 @@
 
             <TextView
                 android:id="@+id/textViewCountryNameMain"
+                style="@style/SecondaryText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="25"
-                android:fontFamily="@font/nunito_sans"
-                android:gravity="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/colorSecondaryText"
                 tools:text="Russia" />
 
             <TextView
                 android:id="@+id/textViewConfirmedMain"
+                style="@style/SecondaryText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="25"
-                android:fontFamily="@font/nunito_sans"
-                android:gravity="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/colorSecondaryText"
                 tools:text="25000" />
 
             <TextView
                 android:id="@+id/textViewRecoveredMain"
+                style="@style/SecondaryText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="25"
-                android:fontFamily="@font/nunito_sans"
-                android:gravity="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/colorSecondaryText"
                 tools:text="45754" />
 
             <TextView
                 android:id="@+id/textViewDeathMain"
+                style="@style/SecondaryText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="25"
-                android:fontFamily="@font/nunito_sans"
-                android:gravity="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/colorSecondaryText"
                 tools:text="788" />
 
@@ -84,34 +76,28 @@
 
             <TextView
                 android:id="@+id/textViewNewConfirmedMain"
+                style="@style/SecondaryText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="25"
-                android:fontFamily="@font/nunito_sans"
-                android:gravity="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/colorBlue"
                 tools:text="+100" />
 
             <TextView
                 android:id="@+id/textViewNewRecoveredMain"
+                style="@style/SecondaryText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="25"
-                android:fontFamily="@font/nunito_sans"
-                android:gravity="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/colorLightGreen"
                 tools:text="+5667" />
 
             <TextView
                 android:id="@+id/textViewNewDeathMain"
+                style="@style/SecondaryText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="25"
-                android:fontFamily="@font/nunito_sans"
-                android:gravity="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/colorRed"
                 tools:text="+67" />
 

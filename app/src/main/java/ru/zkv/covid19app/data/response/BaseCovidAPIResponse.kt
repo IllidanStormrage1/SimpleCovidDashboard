@@ -2,7 +2,7 @@ package ru.zkv.covid19app.data.response
 
 import com.google.gson.annotations.SerializedName
 
-data class BaseCovidAPIResponse(
+class BaseCovidAPIResponse(
     @SerializedName("Global")
     val global: Global,
     @SerializedName("Countries")

@@ -2,7 +2,7 @@ package ru.zkv.covid19app.data.response
 
 import com.google.gson.annotations.SerializedName
 
-data class Country(
+class Country(
     @SerializedName("Country")
     val country: String,
     @SerializedName("CountryCode")

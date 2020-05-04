@@ -8,114 +8,118 @@
 
     <TextView
         android:id="@+id/textViewNewDeathsHeader"
+        style="@style/SecondaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_sans"
         android:textColor="@color/colorRed"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewDea"
         app:layout_constraintEnd_toEndOf="@+id/textViewTotalDeaths"
         app:layout_constraintStart_toStartOf="@+id/textViewTotalDeaths"
         app:layout_constraintTop_toBottomOf="@+id/textViewTotalDeaths" />
 
     <TextView
         android:id="@+id/textViewTotalDeaths"
+        style="@style/SecondaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_sans"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/textViewNewDeathsHeader"
-        app:layout_constraintEnd_toEndOf="@+id/textView12"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitleDeaths"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitleDeaths"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleDeaths" />
 
     <TextView
         android:id="@+id/textViewTotalRecovered"
+
+        style="@style/SecondaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_sans"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/textViewNewRecoveredHeader"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitleRecovered"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitleRecovered"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleRecovered" />
 
     <TextView
         android:id="@+id/textViewNewRecoveredHeader"
+
+        style="@style/SecondaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_sans"
         android:textColor="@color/colorLightGreen"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewRec"
         app:layout_constraintEnd_toEndOf="@+id/textViewTotalRecovered"
         app:layout_constraintStart_toStartOf="@+id/textViewTotalRecovered"
         app:layout_constraintTop_toBottomOf="@+id/textViewTotalRecovered" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textViewTitleRecovered"
+        style="@style/SecondaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/recovered"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/colorLightGreen"
         app:layout_constraintBottom_toTopOf="@+id/textViewTotalRecovered"
-        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTitleDeaths"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toEndOf="@+id/textViewTitleConfirmed"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textViewTitleDeaths"
+
+        style="@style/SecondaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/deaths"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/colorRed"
         app:layout_constraintBottom_toTopOf="@+id/textViewTotalDeaths"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toEndOf="@+id/textViewTitleRecovered"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewTotalConfirmed"
+
+        style="@style/SecondaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_sans"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/textViewNewConfirmedHeader"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitleConfirmed"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitleConfirmed"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleConfirmed" />
 
     <TextView
         android:id="@+id/textViewNewConfirmedHeader"
+
+        style="@style/SecondaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_sans"
+
         android:textColor="@color/colorBlue"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewConfi"
         app:layout_constraintEnd_toEndOf="@+id/textViewTotalConfirmed"
         app:layout_constraintStart_toStartOf="@+id/textViewTotalConfirmed"
         app:layout_constraintTop_toBottomOf="@+id/textViewTotalConfirmed" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textViewTitleConfirmed"
+
+        style="@style/SecondaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/confirmed"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/colorBlue"
         app:layout_constraintBottom_toTopOf="@+id/textViewTotalConfirmed"
-        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTitleRecovered"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewDea"
         android:layout_width="@dimen/layout_32dp"
         android:layout_height="@dimen/layout_32dp"
         android:contentDescription="@string/image_dead"
@@ -126,7 +130,7 @@
         app:srcCompat="@drawable/ic_skull" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageViewRec"
         android:layout_width="@dimen/layout_32dp"
         android:layout_height="@dimen/layout_32dp"
         android:contentDescription="@string/image_recovered"
@@ -138,7 +142,7 @@
         app:srcCompat="@drawable/ic_man" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewConfi"
         android:layout_width="@dimen/layout_32dp"
         android:layout_height="@dimen/layout_32dp"
         android:contentDescription="@string/image_confirmed"

@@ -34,6 +34,7 @@ class MainPresenter @Inject constructor(private val mainInteractor: MainInteract
             } else {
                 viewState.showError()
             }
+
             viewState.showLoading(false)
         }
     }
