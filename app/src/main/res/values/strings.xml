@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Covid19App</string>
 
+    <!--Strings for TextView-->
     <string name="countries">Countries</string>
     <string name="new_confirmed">Confirmed</string>
     <string name="new_recovered">Recovered</string>
@@ -20,6 +21,7 @@
     <string name="image_recovered">imageRecovered</string>
     <string name="image_dead">imageDead</string>
 
+    <!--Strings for ViewHolder-->
     <string name="plus">+%d</string>
     <string name="dotName">%d. %s</string>
 

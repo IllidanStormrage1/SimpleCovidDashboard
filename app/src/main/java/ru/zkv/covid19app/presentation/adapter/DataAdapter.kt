@@ -17,7 +17,7 @@ class DataAdapter : RecyclerView.Adapter<ListViewHolder>() {
         if (isInsertion)
             notifyItemRangeInserted(0, itemCount)
         else
-            notifyItemRangeChanged(0, itemCount, Unit)
+            notifyItemRangeChanged(0, itemCount)
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) =
