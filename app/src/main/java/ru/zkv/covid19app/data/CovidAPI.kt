@@ -8,5 +8,4 @@ interface CovidAPI {
 
     @GET("summary")
     suspend fun summaryData(): Response<BaseCovidAPIResponse>
-
 }

@@ -1,11 +1,13 @@
 package ru.zkv.covid19app.presentation.presenter
 
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import moxy.InjectViewState
 import moxy.MvpPresenter
 import moxy.presenterScope
 import ru.zkv.covid19app.data.response.Country
 import ru.zkv.covid19app.data.response.Global
+import ru.zkv.covid19app.domain.Result
 import ru.zkv.covid19app.domain.interactor.MainInteractor
 import ru.zkv.covid19app.presentation.adapter.DataAdapter
 import ru.zkv.covid19app.presentation.view.MainView
@@ -26,11 +28,15 @@ class MainPresenter @Inject constructor(private val mainInteractor: MainInteract
         presenterScope.launch {
             viewState.showLoading(true)
 
-            val globalData = mainInteractor.getGlobalData()
-            val countriesData = mainInteractor.getCountriesData()
-            if (globalData != null && countriesData != null) {
-                initHeader(globalData)
-                initRecyclerViewAdapter(countriesData)
+            val country = async { mainInteractor.getCountriesData() }
+            val global = async { mainInteractor.getGlobalData() }
+
+            val awaitedCountry = country.await()
+            val awaitedGlobal = global.await()
+
+            if (awaitedCountry is Result.Success && awaitedGlobal is Result.Success) {
+                initHeader(awaitedGlobal.data)
+                initRecyclerViewAdapter(awaitedCountry.data)
             } else {
                 viewState.showError()
             }
