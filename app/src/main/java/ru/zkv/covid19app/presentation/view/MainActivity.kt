@@ -1,7 +1,7 @@
 package ru.zkv.covid19app.presentation.view
 
 import android.os.Bundle
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.main_header_view.*
 import moxy.MvpAppCompatActivity
@@ -52,11 +52,11 @@ class MainActivity : MvpAppCompatActivity(), MainView {
         swipeRefreshLayout.isRefreshing = isLoading
     }
 
-    override fun showError() {
-        MaterialAlertDialogBuilder(this).run {
+    override fun showError(errorText: String) {
+        AlertDialog.Builder(this).run {
             setCancelable(false)
             setTitle(R.string.title)
-            setMessage(R.string.text)
+            setMessage(errorText)
             setPositiveButton(R.string.accept) { _, _ -> presenter.onRefresh() }
             show()
         }

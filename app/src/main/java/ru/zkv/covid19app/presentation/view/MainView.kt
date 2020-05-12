@@ -2,7 +2,7 @@ package ru.zkv.covid19app.presentation.view
 
 import moxy.MvpView
 import moxy.viewstate.strategy.alias.AddToEndSingle
-import moxy.viewstate.strategy.alias.Skip
+import moxy.viewstate.strategy.alias.OneExecution
 import ru.zkv.covid19app.data.response.Global
 import ru.zkv.covid19app.presentation.adapter.DataAdapter
 
@@ -14,9 +14,9 @@ interface MainView : MvpView {
     @AddToEndSingle
     fun initHeaderView(value: Global)
 
-    @Skip
+    @OneExecution
     fun showLoading(isLoading: Boolean)
 
-    @Skip
-    fun showError()
+    @OneExecution
+    fun showError(errorText: String)
 }

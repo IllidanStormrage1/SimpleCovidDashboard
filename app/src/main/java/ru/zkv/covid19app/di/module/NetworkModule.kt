@@ -5,6 +5,7 @@ import dagger.Provides
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import ru.zkv.covid19app.BuildConfig
 import ru.zkv.covid19app.data.CovidAPI
 
 @Module
@@ -21,7 +22,7 @@ object NetworkModule {
     fun provideRetrofit(httpClient: OkHttpClient): Retrofit = with(Retrofit.Builder()) {
         addConverterFactory(GsonConverterFactory.create())
         client(httpClient)
-        baseUrl(ru.zkv.covid19app.BuildConfig.API_BASE_URL)
+        baseUrl(BuildConfig.API_BASE_URL)
         build()
     }
 

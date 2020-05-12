@@ -2,6 +2,7 @@ package ru.zkv.covid19app.domain.interactor
 
 import kotlinx.coroutines.*
 import ru.zkv.covid19app.data.CovidAPI
+import ru.zkv.covid19app.data.response.BaseCovidAPIResponse
 import ru.zkv.covid19app.domain.Result
 import javax.inject.Inject
 
@@ -19,18 +20,18 @@ class MainInteractor @Inject constructor(private val apiModule: CovidAPI) {
             }
         }
 
-    suspend fun getCountriesData() =
+    suspend fun getsummaryData() =
         safeApiCall {
-            apiModule.summaryData().body()?.countries
-                ?.filter { it.totalRecovered != 0 && it.totalConfirmed != 0 && it.totalRecovered != 0 }
-                ?.sortedBy { it.totalConfirmed }
-                ?.asReversed()
+            apiModule.summaryData()
         }
 
-    suspend fun getGlobalData() =
-        safeApiCall {
-            apiModule.summaryData().body()?.global
-        }
+    fun prepareCountriesData(data: BaseCovidAPIResponse) =
+        data.countries
+            .filter { it.totalRecovered != 0 && it.totalConfirmed != 0 && it.totalRecovered != 0 }
+            .sortedBy { it.totalConfirmed }
+            .asReversed()
+
+    fun prepareHeaderData(data: BaseCovidAPIResponse) = data.global
 
     fun onDestroy() {
         coroutineScope.cancel()
