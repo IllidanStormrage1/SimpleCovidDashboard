@@ -84,7 +84,6 @@
                 tools:listitem="@layout/recyclerview_item" />
 
         </LinearLayout>
-
     </LinearLayout>
 
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

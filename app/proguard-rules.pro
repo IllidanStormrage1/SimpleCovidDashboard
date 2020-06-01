@@ -20,6 +20,7 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
+
 # retrofit
 -dontwarn com.squareup.**
 -dontwarn retrofit.appengine.UrlFetchClient

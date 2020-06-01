@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <dimen name="card_corner_radius">8dp</dimen>
     <dimen name="card_elevation">2dp</dimen>
     <dimen name="card_padding">4dp</dimen>
@@ -9,4 +10,5 @@
     <dimen name="linear_layout_margin_top">8dp</dimen>
     <dimen name="layout_space">16dp</dimen>
     <dimen name="min_height_flag_image" tools:ignore="PxUsage">64px</dimen>
+
 </resources>

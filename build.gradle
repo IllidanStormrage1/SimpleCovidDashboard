@@ -8,11 +8,13 @@ buildscript {
         retrofitVersion = '2.8.1'
         glideVersion = '4.11.0'
     }
+
     repositories {
         google()
         mavenCentral()
         jcenter()
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"

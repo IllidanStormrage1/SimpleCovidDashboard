@@ -102,6 +102,6 @@
                 tools:text="+67" />
 
         </LinearLayout>
-
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>
