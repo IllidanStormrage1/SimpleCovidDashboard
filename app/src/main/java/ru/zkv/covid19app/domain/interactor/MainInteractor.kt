@@ -20,7 +20,7 @@ class MainInteractor @Inject constructor(private val apiModule: CovidAPI) {
             }
         }
 
-    suspend fun getsummaryData() =
+    suspend fun getSummaryData() =
         safeApiCall {
             apiModule.summaryData()
         }
