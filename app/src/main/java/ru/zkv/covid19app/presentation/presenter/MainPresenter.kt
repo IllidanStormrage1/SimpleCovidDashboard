@@ -1,6 +1,5 @@
 package ru.zkv.covid19app.presentation.presenter
 
-import android.util.Log
 import kotlinx.coroutines.launch
 import moxy.InjectViewState
 import moxy.MvpPresenter
@@ -28,7 +27,7 @@ class MainPresenter @Inject constructor(private val mainInteractor: MainInteract
         presenterScope.launch {
             viewState.showLoading(true)
 
-            when (val apiResponse = mainInteractor.getsummaryData()) {
+            when (val apiResponse = mainInteractor.getSummaryData()) {
                 is Result.Success -> {
                     initHeader(mainInteractor.prepareHeaderData(data = apiResponse.data))
                     initRecyclerViewAdapter(mainInteractor.prepareCountriesData(data = apiResponse.data))

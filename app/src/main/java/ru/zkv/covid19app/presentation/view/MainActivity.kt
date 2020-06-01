@@ -14,7 +14,7 @@ import ru.zkv.covid19app.presentation.presenter.MainPresenter
 import javax.inject.Inject
 import javax.inject.Provider
 
-class MainActivity : MvpAppCompatActivity(), MainView {
+class MainActivity : @javax.inject.Inject MvpAppCompatActivity(), MainView {
 
     @Inject
     lateinit var mainPresenterProvider: Provider<MainPresenter>
@@ -31,6 +31,8 @@ class MainActivity : MvpAppCompatActivity(), MainView {
             setOnRefreshListener { presenter.onRefresh() }
             setColorSchemeResources(R.color.colorRed, R.color.colorLightGreen, R.color.colorBlue)
         }
+
+        mainRecyclerView.setHasFixedSize(true)
     }
 
     override fun setRecyclerViewAdapter(adapter: DataAdapter) {
