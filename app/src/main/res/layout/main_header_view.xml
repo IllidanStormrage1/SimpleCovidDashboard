@@ -99,7 +99,6 @@
 
     <TextView
         android:id="@+id/textViewTitleConfirmed"
-
         style="@style/SecondaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
