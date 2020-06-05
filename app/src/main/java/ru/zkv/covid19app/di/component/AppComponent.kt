@@ -5,13 +5,14 @@ import dagger.BindsInstance
 import dagger.Component
 import ru.zkv.covid19app.di.module.NetworkModule
 import ru.zkv.covid19app.presentation.view.MainActivity
+import ru.zkv.covid19app.presentation.view.mainFragment.MainFragment
 import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [NetworkModule::class])
 interface AppComponent {
 
-    fun inject(activity: MainActivity)
+    fun inject(mainFragment: MainFragment)
 
     @Component.Builder
     interface Builder {

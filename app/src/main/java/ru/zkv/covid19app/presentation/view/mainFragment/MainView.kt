@@ -1,4 +1,4 @@
-package ru.zkv.covid19app.presentation.view
+package ru.zkv.covid19app.presentation.view.mainFragment
 
 import moxy.MvpView
 import moxy.viewstate.strategy.alias.AddToEndSingle

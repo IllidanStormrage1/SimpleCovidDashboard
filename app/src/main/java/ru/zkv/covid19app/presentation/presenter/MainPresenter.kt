@@ -9,7 +9,7 @@ import ru.zkv.covid19app.data.response.Global
 import ru.zkv.covid19app.domain.Result
 import ru.zkv.covid19app.domain.interactor.MainInteractor
 import ru.zkv.covid19app.presentation.adapter.DataAdapter
-import ru.zkv.covid19app.presentation.view.MainView
+import ru.zkv.covid19app.presentation.view.mainFragment.MainView
 import javax.inject.Inject
 
 @InjectViewState
