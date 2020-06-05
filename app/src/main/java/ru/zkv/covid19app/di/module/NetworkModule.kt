@@ -7,18 +7,21 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import ru.zkv.covid19app.BuildConfig
 import ru.zkv.covid19app.data.CovidAPI
+import javax.inject.Singleton
 
 @Module
 object NetworkModule {
 
     @Provides
     @JvmStatic
+    @Singleton
     fun provideHttpClient(): OkHttpClient = with(OkHttpClient.Builder()) {
         build()
     }
 
     @Provides
     @JvmStatic
+    @Singleton
     fun provideRetrofit(httpClient: OkHttpClient): Retrofit = with(Retrofit.Builder()) {
         addConverterFactory(GsonConverterFactory.create())
         client(httpClient)

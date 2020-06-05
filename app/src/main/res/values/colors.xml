@@ -7,7 +7,6 @@
     <!--Colors for background-->
     <color name="colorFrontLayer">#fdfdfd</color>
     <color name="colorBackLayer">#181818</color>
-    <color name="colorLightGray">#F0F1F3</color>
 
     <!--Colors for text-->
     <color name="colorSecondaryText">#555770</color>

@@ -5,7 +5,9 @@ import dagger.BindsInstance
 import dagger.Component
 import ru.zkv.covid19app.di.module.NetworkModule
 import ru.zkv.covid19app.presentation.view.MainActivity
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [NetworkModule::class])
 interface AppComponent {
 

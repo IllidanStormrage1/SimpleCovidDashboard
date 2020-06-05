@@ -4,104 +4,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/layout_space"
-    android:layout_marginEnd="@dimen/layout_space"
-    app:cardBackgroundColor="@color/colorLightGray"
+    app:cardBackgroundColor="@android:color/white"
     app:cardCornerRadius="@dimen/card_corner_radius"
     app:cardElevation="@dimen/card_elevation"
     app:cardUseCompatPadding="true">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:padding="@dimen/card_padding">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textViewCountryNameMain"
+            style="@style/SecondaryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textColor="@color/colorSecondaryText"
+            app:layout_constraintBottom_toTopOf="@+id/imageViewCountry"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Rfgвfia" />
+
+        <TextView
+            android:id="@+id/textViewConfirmedMain"
+            style="@style/SecondaryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorSecondaryText"
+            app:layout_constraintBottom_toTopOf="@+id/textViewNewConfirmedMain"
+            app:layout_constraintEnd_toStartOf="@+id/guideline9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="25fgdfg000" />
+
+        <TextView
+            android:id="@+id/textViewRecoveredMain"
+            style="@style/SecondaryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorSecondaryText"
+            app:layout_constraintBottom_toTopOf="@+id/textViewNewRecoveredMain"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline9"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="45754" />
+
+        <TextView
+            android:id="@+id/textViewDeathMain"
+            style="@style/SecondaryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorSecondaryText"
+            app:layout_constraintBottom_toTopOf="@+id/textViewNewDeathMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="788" />
+
+        <ImageView
+            android:id="@+id/imageViewCountry"
+            android:layout_width="@dimen/min_height_flag_image"
+            android:layout_height="@dimen/min_height_flag_image"
+            android:contentDescription="@string/image_country"
+            android:minWidth="@dimen/min_height_flag_image"
+            android:minHeight="@dimen/min_height_flag_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewCountryNameMain"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/textViewCountryNameMain"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCountryNameMain" />
+
+        <TextView
+            android:id="@+id/textViewNewConfirmedMain"
+            style="@style/SecondaryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewConfirmedMain"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/textViewConfirmedMain"
+            app:layout_constraintTop_toBottomOf="@+id/textViewConfirmedMain"
+            tools:text="+100" />
+
+        <TextView
+            android:id="@+id/textViewNewRecoveredMain"
+            style="@style/SecondaryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorLightGreen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewRecoveredMain"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/textViewRecoveredMain"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRecoveredMain"
+            tools:text="+5667" />
+
+        <TextView
+            android:id="@+id/textViewNewDeathMain"
+            style="@style/SecondaryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorRed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDeathMain"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/textViewDeathMain"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDeathMain"
+            tools:text="+67" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:weightSum="100">
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.20" />
 
-            <TextView
-                android:id="@+id/textViewCountryNameMain"
-                style="@style/SecondaryText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:textColor="@color/colorSecondaryText"
-                tools:text="Russia" />
-
-            <TextView
-                android:id="@+id/textViewConfirmedMain"
-                style="@style/SecondaryText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:textColor="@color/colorSecondaryText"
-                tools:text="25000" />
-
-            <TextView
-                android:id="@+id/textViewRecoveredMain"
-                style="@style/SecondaryText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:textColor="@color/colorSecondaryText"
-                tools:text="45754" />
-
-            <TextView
-                android:id="@+id/textViewDeathMain"
-                style="@style/SecondaryText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:textColor="@color/colorSecondaryText"
-                tools:text="788" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:weightSum="100">
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
 
-            <ImageView
-                android:id="@+id/imageViewCountry"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:contentDescription="@string/image_country"
-                android:minHeight="@dimen/min_height_flag_image" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.80" />
 
-            <TextView
-                android:id="@+id/textViewNewConfirmedMain"
-                style="@style/SecondaryText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:textColor="@color/colorBlue"
-                tools:text="+100" />
 
-            <TextView
-                android:id="@+id/textViewNewRecoveredMain"
-                style="@style/SecondaryText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:textColor="@color/colorLightGreen"
-                tools:text="+5667" />
-
-            <TextView
-                android:id="@+id/textViewNewDeathMain"
-                style="@style/SecondaryText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="25"
-                android:textColor="@color/colorRed"
-                tools:text="+67" />
-
-        </LinearLayout>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

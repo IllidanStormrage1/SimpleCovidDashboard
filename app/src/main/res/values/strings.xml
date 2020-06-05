@@ -13,7 +13,6 @@
 
     <!--Strings for AlertDialog-->
     <string name="title">Ooops</string>
-    <string name="text">An error has occurred</string>
     <string name="accept">OK</string>
 
     <!--Strings for Image description-->
