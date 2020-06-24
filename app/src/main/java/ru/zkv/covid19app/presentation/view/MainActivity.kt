@@ -16,7 +16,7 @@ import ru.zkv.covid19app.presentation.presenter.MainPresenter
 import javax.inject.Inject
 import javax.inject.Provider
 
-class MainActivity : @javax.inject.Inject MvpAppCompatActivity(), MainView {
+class MainActivity : MvpAppCompatActivity(), MainView {
 
     @Inject
     lateinit var mainPresenterProvider: Provider<MainPresenter>
